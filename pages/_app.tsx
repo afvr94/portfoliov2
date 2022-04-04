@@ -1,6 +1,7 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import { FC } from "react";
+import "reset-css";
 
 const theme = extendTheme({
   colors: {
