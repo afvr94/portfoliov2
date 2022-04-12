@@ -1,5 +1,5 @@
-import { Flex, IconButton, Link } from "@chakra-ui/react";
-import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { Flex, IconButton, Link } from '@chakra-ui/react';
+import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const SocialBar = () => {
   return (
@@ -11,9 +11,9 @@ const SocialBar = () => {
           bg="transparent"
           color="gray.400"
           sx={{
-            "&:hover": {
-              color: "white",
-              bg: "transparent",
+            '&:hover': {
+              color: 'white',
+              bg: 'transparent',
             },
           }}
         />
@@ -25,9 +25,9 @@ const SocialBar = () => {
           bg="transparent"
           color="gray.400"
           sx={{
-            "&:hover": {
-              color: "white",
-              bg: "transparent",
+            '&:hover': {
+              color: 'white',
+              bg: 'transparent',
             },
           }}
         />
@@ -39,9 +39,9 @@ const SocialBar = () => {
           bg="transparent"
           color="gray.400"
           sx={{
-            "&:hover": {
-              color: "white",
-              bg: "transparent",
+            '&:hover': {
+              color: 'white',
+              bg: 'transparent',
             },
           }}
         />
@@ -53,9 +53,9 @@ const SocialBar = () => {
           bg="transparent"
           color="gray.400"
           sx={{
-            "&:hover": {
-              color: "white",
-              bg: "transparent",
+            '&:hover': {
+              color: 'white',
+              bg: 'transparent',
             },
           }}
         />

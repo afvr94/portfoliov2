@@ -1,9 +1,9 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import React from "react";
-import { getAge } from "../lib/helpers";
+import { Box, Flex, Text } from '@chakra-ui/react';
+import React from 'react';
+import { getAge } from '../lib/helpers';
 
 const SidebarPersonalInfo = () => {
-  const myAge = getAge("1994/02/01");
+  const myAge = getAge('1994/02/01');
 
   return (
     <Box>

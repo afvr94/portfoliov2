@@ -1,5 +1,5 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
+import { Box, Flex, Text } from '@chakra-ui/react';
+import Typewriter from 'typewriter-effect';
 
 const HomeHeader = () => {
   return (
@@ -20,12 +20,7 @@ const HomeHeader = () => {
       >
         <Flex>
           <Box>
-            <Text
-              fontSize="6xl"
-              fontWeight="bold"
-              color="white"
-              textAlign="left"
-            >
+            <Text fontSize="6xl" fontWeight="bold" color="white" textAlign="left">
               Discover all about me and my work!
             </Text>
             <Flex>
@@ -36,19 +31,14 @@ const HomeHeader = () => {
                 </Text>
                 &gt; I build
               </Text>
-              <Box
-                color="white"
-                fontSize="2xl"
-                marginX="5px"
-                fontFamily="monospace"
-              >
+              <Box color="white" fontSize="2xl" marginX="5px" fontFamily="monospace">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("robust apis!")
+                      .typeString('robust apis!')
                       .pauseFor(2500)
                       .deleteAll()
-                      .typeString("amazing and responsive websites!")
+                      .typeString('amazing and responsive websites!')
                       .deleteAll()
                       .start();
                   }}

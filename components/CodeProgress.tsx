@@ -1,5 +1,5 @@
-import { Box, Flex, Text, Progress as ChakraProgress } from "@chakra-ui/react";
-import React, { FC } from "react";
+import { Box, Flex, Text, Progress as ChakraProgress } from '@chakra-ui/react';
+import React, { FC } from 'react';
 
 const Progress: FC<{ text: string; value: number }> = ({ text, value }) => {
   return (

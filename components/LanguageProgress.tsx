@@ -1,15 +1,7 @@
-import {
-  Box,
-  CircularProgress,
-  CircularProgressLabel,
-  Text,
-} from "@chakra-ui/react";
-import { FC } from "react";
+import { Box, CircularProgress, CircularProgressLabel, Text } from '@chakra-ui/react';
+import { FC } from 'react';
 
-const LanguageProgress: FC<{ text: string; value: number }> = ({
-  text,
-  value,
-}) => {
+const LanguageProgress: FC<{ text: string; value: number }> = ({ text, value }) => {
   return (
     <Box>
       <CircularProgress value={value} color="yellow.400" thickness="7px">

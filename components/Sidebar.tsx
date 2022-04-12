@@ -1,10 +1,10 @@
-import { Box, Divider, Flex, Icon, Stack, Text } from "@chakra-ui/react";
-import { FiCheck } from "react-icons/fi";
-import Progress from "./CodeProgress";
-import LanguageProgress from "./LanguageProgress";
-import SocialBar from "./SocialBar";
-import SidebarHeader from "./SidebarHeader";
-import SidebarPersonalInfo from "./SidebarPersonalInfo";
+import { Box, Divider, Flex, Icon, Stack, Text } from '@chakra-ui/react';
+import { FiCheck } from 'react-icons/fi';
+import Progress from './CodeProgress';
+import LanguageProgress from './LanguageProgress';
+import SocialBar from './SocialBar';
+import SidebarHeader from './SidebarHeader';
+import SidebarPersonalInfo from './SidebarPersonalInfo';
 
 const Sidebar = () => {
   return (
@@ -28,12 +28,7 @@ const Sidebar = () => {
       >
         <SidebarHeader />
       </Box>
-      <Box
-        overflowY="auto"
-        width="100%"
-        height="calc(100% - 285px)"
-        padding="30px"
-      >
+      <Box overflowY="auto" width="100%" height="calc(100% - 285px)" padding="30px">
         <SidebarPersonalInfo />
         <Divider marginY="20px" borderColor="gray.100" />
         <Box>
