@@ -1,8 +1,33 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Text, Show, IconButton } from '@chakra-ui/react';
+import { FC } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
 
-const SidebarHeader = () => {
+type Props = {
+  onHideSidebar?: () => void;
+};
+
+const SidebarHeader: FC<Props> = ({ onHideSidebar }) => {
   return (
     <Flex align="center" justify="center" direction="column">
+      <Show breakpoint="(max-width: 920px)">
+        <IconButton
+          icon={<AiOutlineClose />}
+          onClick={onHideSidebar}
+          aria-label="close sidebar"
+          position="absolute"
+          bg="transparent"
+          color="yellow.400"
+          top="0px"
+          right="0px"
+          fontSize="xl"
+          sx={{
+            '&:hover': {
+              color: 'white',
+              bg: 'transparent',
+            },
+          }}
+        />
+      </Show>
       <Image
         src="https://abdielvegabucket.s3.amazonaws.com/1639234866541.jpeg"
         boxSize="90px"
@@ -20,6 +45,10 @@ const SidebarHeader = () => {
       </Text>
     </Flex>
   );
+};
+
+SidebarHeader.defaultProps = {
+  onHideSidebar: undefined,
 };
 
 export default SidebarHeader;

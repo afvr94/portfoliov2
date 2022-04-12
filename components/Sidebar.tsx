@@ -1,12 +1,17 @@
 import { Box, Divider, Flex, Icon, Stack, Text } from '@chakra-ui/react';
 import { FiCheck } from 'react-icons/fi';
+import { FC } from 'react';
 import Progress from './CodeProgress';
 import LanguageProgress from './LanguageProgress';
 import SocialBar from './SocialBar';
 import SidebarHeader from './SidebarHeader';
 import SidebarPersonalInfo from './SidebarPersonalInfo';
 
-const Sidebar = () => {
+type Props = {
+  onHideSidebar?: () => void;
+};
+
+const Sidebar: FC<Props> = ({ onHideSidebar }) => {
   return (
     <Box
       width="300px"
@@ -18,6 +23,16 @@ const Sidebar = () => {
       overflowY="hidden"
       boxShadow="0 3px 8px 0 rgba(15, 15, 20, 0.2)"
       transition="0.55s ease-in-out"
+      sx={{
+        '@media (max-width: 920px)': {
+          position: 'relative',
+          top: '0',
+          bottom: '0',
+          left: '0',
+          width: '100%',
+          height: '100%',
+        },
+      }}
     >
       <Box
         height="235px"
@@ -26,7 +41,7 @@ const Sidebar = () => {
         bg="linear-gradient(159deg, rgba(37, 37, 50, 0.90) 0%, rgba(35, 35, 45, 0.90) 100%)"
         boxShadow="box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1)"
       >
-        <SidebarHeader />
+        <SidebarHeader onHideSidebar={onHideSidebar} />
       </Box>
       <Box overflowY="auto" width="100%" height="calc(100% - 285px)" padding="30px">
         <SidebarPersonalInfo />
@@ -81,6 +96,10 @@ const Sidebar = () => {
       </Box>
     </Box>
   );
+};
+
+Sidebar.defaultProps = {
+  onHideSidebar: undefined,
 };
 
 export default Sidebar;

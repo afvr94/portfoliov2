@@ -12,6 +12,11 @@ const HomeHeader = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
+      sx={{
+        '@media (max-width: 920px)': {
+          padding: '30px',
+        },
+      }}
     >
       <Box
         bgGradient="linear(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%)"
@@ -20,25 +25,22 @@ const HomeHeader = () => {
       >
         <Flex>
           <Box>
-            <Text fontSize="6xl" fontWeight="bold" color="white" textAlign="left">
+            <Text fontSize="5xl" fontWeight="bold" color="white" textAlign="left">
               Discover all about me and my work!
             </Text>
             <Flex>
-              <Text color="white" fontSize="2xl" fontFamily="monospace">
-                &lt;
-                <Text as="span" color="yellow.300">
-                  code
-                </Text>
-                &gt; I build
-              </Text>
               <Box color="white" fontSize="2xl" marginX="5px" fontFamily="monospace">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString('robust apis!')
+                      .typeString('&lt;<span style="color: #ECC94B;">code</span>&gt; I build ')
+                      .typeString('robust apis! &lt;/<span style="color: #ECC94B;">code</span>&gt;')
                       .pauseFor(2500)
-                      .deleteAll()
-                      .typeString('amazing and responsive websites!')
+                      .deleteChars(20)
+                      .typeString(
+                        ' amazing and responsive websites! &lt;/<span style="color: #ECC94B;">code</span>&gt;'
+                      )
+                      .pauseFor(2500)
                       .deleteAll()
                       .start();
                   }}
@@ -48,13 +50,6 @@ const HomeHeader = () => {
                   }}
                 />
               </Box>
-              <Text color="white" fontSize="2xl" fontFamily="monospace">
-                &lt;/
-                <Text as="span" color="yellow.300">
-                  code
-                </Text>
-                &gt;
-              </Text>
             </Flex>
           </Box>
         </Flex>
