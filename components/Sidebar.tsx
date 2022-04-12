@@ -88,7 +88,7 @@ const Sidebar: FC<Props> = ({ onHideSidebar }) => {
         </Stack>
         <Divider marginY="20px" borderColor="gray.100" />
         <Link
-          href="https://chakra-ui.com"
+          href="https://abdielvegabucket.s3.amazonaws.com/Abdiel_Vega_Resume.pdf"
           isExternal
           outline="none"
           color="gray.400"
@@ -103,7 +103,8 @@ const Sidebar: FC<Props> = ({ onHideSidebar }) => {
           }}
         >
           <Flex align="center" marginTop="15px">
-            <Text> Download resume</Text> <FiDownload />
+            <Text> Download resume</Text>
+            <Icon as={FiDownload} marginLeft="5px" />
           </Flex>
         </Link>
       </Box>
