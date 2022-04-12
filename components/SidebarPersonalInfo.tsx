@@ -9,6 +9,14 @@ const SidebarPersonalInfo = () => {
     <Box>
       <Flex>
         <Text fontSize="sm" fontWeight="bold" color="white">
+          Email:
+        </Text>
+        <Text marginLeft="auto" color="gray.400">
+          me@abdielvega.com
+        </Text>
+      </Flex>
+      <Flex>
+        <Text fontSize="sm" fontWeight="bold" color="white">
           Residence:
         </Text>
         <Text marginLeft="auto" color="gray.400">

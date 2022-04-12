@@ -1,5 +1,5 @@
-import { Box, Divider, Flex, Icon, Stack, Text } from '@chakra-ui/react';
-import { FiCheck } from 'react-icons/fi';
+import { Box, Divider, Flex, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { FiCheck, FiDownload } from 'react-icons/fi';
 import { FC } from 'react';
 import Progress from './CodeProgress';
 import LanguageProgress from './LanguageProgress';
@@ -86,6 +86,26 @@ const Sidebar: FC<Props> = ({ onHideSidebar }) => {
             </Text>
           </Flex>
         </Stack>
+        <Divider marginY="20px" borderColor="gray.100" />
+        <Link
+          href="https://chakra-ui.com"
+          isExternal
+          outline="none"
+          color="gray.400"
+          fontSize="sm"
+          sx={{
+            '&:hover': {
+              outline: 'none',
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bold',
+            },
+          }}
+        >
+          <Flex align="center" marginTop="15px">
+            <Text> Download resume</Text> <FiDownload />
+          </Flex>
+        </Link>
       </Box>
       <Box
         height="50px"
